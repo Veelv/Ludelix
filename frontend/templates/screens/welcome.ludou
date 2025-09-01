@@ -1,0 +1,48 @@
+#extends['layouts.app']
+
+#slot['title']
+    #[$title]
+#endslot
+
+#slot['content']
+<div #[fl-flex|fl-flex-col|fl-items-center|fl-justify-center|fl-h-screen]>
+    <div #[fl-text-align-center|f-w-full]>
+        <div> <img src="#[asset('/logo.png')]" #[fl-h-56]/> </div>
+        <h1 #[fl-text-7xl|fl-font-bold|fl-text-primary|fl-mb-4|fl-text-transform-uppercase]>
+            Ludelix
+        </h1>
+        <p #[fl-text-lg|fl-cloud-800|fl-mb-8]>
+            O framework PHP para desenvolvedores web.
+        </p>
+        <div #[fl-flex|fl-flex-col|fl-sm:flex-row|fl-gap-4|fl-justify-center|fl-items-center]>
+            <a 
+                href="https://ludelix.com/" 
+                #[fl-hover:underline|fl-bg-sapphire-500|fl-text-white|fl-text-sm|fl-font-weight-bold|fl-letter-spacing-widest|fl-decoration-none|fl-text-transform-uppercase|fl-px-4|fl-py-2|fl-radius-md]>
+                Documentação
+            </a>
+            <a 
+                href="https://github.com/Veelv/ludelix-framework" 
+                #[fl-text-white|fl-text-sm|fl-font-weight-regular|fl-letter-spacing-widest|fl-hover:underline|fl-bg-cloud-500|fl-px-4|fl-py-2|fl-radius-sm]>
+                GitHub
+            </a>
+        </div>
+        <div #[fl-mt-8]>
+            <p #[fl-text-lg|fl-cloud-800]>Contador: <span id="counter">0</span></p>
+            <button id="increment-button" #[fl-md:fl-bg-black|fl-bg-primary|fl-text-white|fl-px-4|fl-py-2|fl-radius-md|fl-mt-4|fl-hover:fl-bg-cherry-300|fl-cursor-pointer|fl-border-cherry-300]>
+                Clique aqui
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const counter = document.getElementById('counter');
+    const incrementButton = document.getElementById('increment-button');
+    let count = 0;
+
+    incrementButton.addEventListener('click', () => {
+        count++;
+        counter.innerText = count;
+    });
+</script>
+#endslot

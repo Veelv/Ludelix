@@ -1,0 +1,45 @@
+#extends['layouts.error']
+
+#section title
+Página não encontrada
+#endsection
+
+#section content
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <div class="mb-4">
+                        <h1 class="display-1 text-danger fw-bold">404</h1>
+                        <h2 class="text-primary mb-4">Página não encontrada</h2>
+                        <p class="lead text-muted mb-4">A página que você está procurando não existe ou foi movida.</p>
+                    </div>
+                    
+                    <div class="alert alert-light border">
+                        <h5 class="alert-heading">🔍 O que você pode fazer:</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>✅ Verificar se o endereço está correto</li>
+                            <li>✅ Usar o menu de navegação</li>
+                            <li>✅ Voltar à página inicial</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-block mt-4">
+                        <a href="/" class="btn btn-primary btn-lg me-2">
+                            <i class="fas fa-home me-2"></i>Voltar ao início
+                        </a>
+                        <a href="/welcome" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-info-circle me-2"></i>Sobre
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#endsection
+
+#section version
+#[version ?? '1.1.0']
+#endsection 

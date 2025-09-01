@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#yield title | Ludelix Framewor</title>
+    <link rel="icon" href="#[asset('/favicon.ico')]" />
+    <link rel="stylesheet" href="#[asset('/css/app.css')]" />
+</head>
+<body #[fl-bg-white|fl-text-cloud-500|fl-m-0|fl-p-0|fl-font-sans|fl-antialiased]>
+    #yield content
+</body>
+</html>

@@ -1,0 +1,42 @@
+# Dependencies
+/vendor/
+/node_modules/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cubby
+/cubby/cache/*
+/cubby/logs/*
+/cubby/up/*
+/cubby/session/*
+/cubby/database.sqlite
+!cubby/cache/.gitkeep
+!cubby/logs/.gitkeep
+!cubby/up/.gitkeep
+!cubby/session/.gitkeep
+
+# Build
+/public/assets/build/*
+!/public/assets/build/.gitkeep
+
+# Tests
+.phpunit.result.cache
+/coverage/
+
+# Hot reload
+.hot
+vite.config.js.timestamp-*

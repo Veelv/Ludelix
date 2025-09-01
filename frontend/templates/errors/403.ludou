@@ -1,0 +1,45 @@
+#extends['layouts.error']
+
+#section title
+Acesso negado
+#endsection
+
+#section content
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <div class="mb-4">
+                        <h1 class="display-1 text-warning fw-bold">403</h1>
+                        <h2 class="text-primary mb-4">Acesso negado</h2>
+                        <p class="lead text-muted mb-4">Você não tem permissão para acessar esta página ou recurso.</p>
+                    </div>
+                    
+                    <div class="alert alert-warning border">
+                        <h5 class="alert-heading">🚫 Por que isso aconteceu:</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>❌ Você não está autenticado</li>
+                            <li>❌ Sua conta não tem permissões suficientes</li>
+                            <li>❌ Esta área requer autorização especial</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-block mt-4">
+                        <a href="/" class="btn btn-primary btn-lg me-2">
+                            <i class="fas fa-home me-2"></i>Voltar ao início
+                        </a>
+                        <a href="/login" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-sign-in-alt me-2"></i>Fazer login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#endsection
+
+#section version
+#[version ?? '1.1.0']
+#endsection 

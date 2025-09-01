@@ -1,0 +1,46 @@
+#extends['layouts.error']
+
+#section title
+Método não permitido
+#endsection
+
+#section content
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <div class="mb-4">
+                        <h1 class="display-1 text-info fw-bold">405</h1>
+                        <h2 class="text-primary mb-4">Método não permitido</h2>
+                        <p class="lead text-muted mb-4">O método de requisição usado não é suportado para este recurso.</p>
+                    </div>
+                    
+                    <div class="alert alert-info border">
+                        <h5 class="alert-heading">ℹ️ O que aconteceu:</h5>
+                        <p class="mb-0">#[message]</p>
+                    </div>
+                    
+                    <div class="alert alert-light border mt-3">
+                        <h6 class="alert-heading">💡 Métodos permitidos:</h6>
+                        <p class="mb-0">GET, POST, PUT, DELETE, PATCH</p>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-block mt-4">
+                        <a href="/" class="btn btn-primary btn-lg me-2">
+                            <i class="fas fa-home me-2"></i>Voltar ao início
+                        </a>
+                        <button onclick="history.back()" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-arrow-left me-2"></i>Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#endsection
+
+#section version
+#[version ?? '1.1.0']
+#endsection 
